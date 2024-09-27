@@ -1,0 +1,235 @@
+/* Global styles and navbar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #4CAF50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+}
+
+.logo a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+/* Container for Student Info and Courses */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Student Information Card */
+.student-card {
+    flex: 1 1 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.student-card-header {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.student-card-header h2 {
+    font-size: 24px;
+    color: #4CAF50;
+    margin: 0;
+}
+
+.student-card-body .student-info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.student-info-row:last-child {
+    border-bottom: none;
+}
+
+.student-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.student-value {
+    color: #666;
+}
+
+/* Courses Taken Card */
+.courses-card {
+    flex: 1 1 600px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.courses-card h2 {
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.courses-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.courses-table th, .courses-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.courses-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.course-row {
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+.course-row:hover {
+    background-color: #f1f1f1;
+}
+
+.accordion {
+    display: none;
+}
+
+.sections-table th {
+    background-color: #2196F3;
+    color: white;
+}
+
+/* Course Selection Section */
+.course-selection {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.course-selection h2 {
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.course-selection-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.course-selection-table th, .course-selection-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.course-selection-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.course-selection-table button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.course-selection-table button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .student-card, .courses-card, .course-selection {
+        flex: 1 1 100%;
+    }
+
+    .student-card-header h2, .courses-card h2, .course-selection h2 {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <a href="#">Pre- Advising</a>
+    </div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="#">Course Evaluation</a></li>
+        <li><a href="#">Registration</a></li>
+        <li><a href="#">My Account</a></li>
+        <li><a href="#">Log out</a></li>
+    </ul>
+    <div class="burger" id="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</nav>
+
+<div class="content-wrapper">
+    <!-- Left Side: Student Information -->
+    <div class="student-card">
+        <div class="student-card-header">
+            <h2>Student Information</h2>
+        </div>
+        <div class="student-card-body">
+            <div class="student-info-row">
+                <span class="student-label">Student ID:</span>
+                <span class="student-value">011201000</span>
+            </div>
+            <div class="student-info-row">
+                <span class="student-label">Name:</span>
+                <span class="student-value">A</span>
+            </div>
+            <div class="student-info-row">
+                <span class="student-label">Batch:</span>
+                <span class="student-value">201 - Spring 2020</span>
+            </div>
+            <div class="student-info-row">
+                <span class="student-label">Program:</span>
+                <span class="student-value">BSCSE</span>
+            </div>
+            <div class="student-info-row">
+                <span class="student-label">Pre-Advising Cr. Limit:</span>
+                <span class="student-value">15.00</span>
+            </div>
+            <div class="student-info-row">
+                <span class="student-label">CGPA:</span>
+                <span class="student-value">5.00</span>
+            </div>
+            <div class="student-info-row">
+                <span class="student-label">Major:</span>
+                <span class="student-value">--</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Side: Courses Taken -->
+    <div class="courses-card">
+        <h2>Courses Taken</h2>
+        <table class="courses-table">
+            <thead>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Title</th>
+                    <th>Credits</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Courses will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Course Selection Section -->
+<div class="course-selection">
+    <h2>Select Courses</h2>
+    <table class="course-selection-table">
+        <thead>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Title</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CSE104</td>
+                <td>Computer Networks</td>
+                <td><button class="select-course" data-course="CSE104">Add</button></td>
+            </tr>
+            <tr>
+                <td>CSE105</td>
+                <td>Operating Systems</td>
+                <td><button class="select-course" data-course="CSE105">Add</button></td>
+            </tr>
+            <tr>
+                <td>CSE106</td>
+                <td>Database Systems</td>
+                <td><button class="select-course" data-course="CSE106">Add</button></td>
+            </tr>
+            <tr>
+                <td>CSE107</td>
+                <td>Software Engineering</td>
+                <td><button class="select-course" data-course="CSE107">Add</button></td>
+            </tr>
+            <tr>
+                <td>CSE108</td>
+                <td>Computer Graphics</td>
+                <td><button class="select-course" data-course="CSE108">Add</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
